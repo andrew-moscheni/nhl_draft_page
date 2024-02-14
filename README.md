@@ -9,7 +9,6 @@ The pre-processing phase has currently been completed, combining the draft infor
 Phase 2 is underway, taking the statistics and running ANOVA tests to figure out which statistics are significant between different variables that will be regressed on.
 
 # Future Plans
-- Phase 2, as mentioned before, is finding significance between mutliple variables and the expected outputs.
 - Phase 3 will be creating the models, beginning with "straightforward" models, such as SVMs and Decision Trees, and then branching to a neural network.
 - Phase 4 will be training the models and tuning the hyperparameters.
 - Phase 5 will be analysis of the models' performances and plotting how the model performed in projecting statistics.

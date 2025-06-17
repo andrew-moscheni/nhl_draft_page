@@ -1,7 +1,7 @@
 # NHL Draft and Player Predictions Page
 This is a personal project of mine to predict NHL statistics of draft-eligible players. This page will be comprised of a welcome page, a draft predictions page, and a player page to predict the next few games' worth of statistics.
 
-This page will be connected to a PostgreSQL database to store all the data. Each player will have their stats recorded and updated as the season progresses. 
+This page will be connected to a PostgreSQL database to store all the data. Each player will have their stats recorded and updated as the season progresses, ensuring accurate and updated predictions are captured.
 
 
 # Current Stage

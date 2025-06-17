@@ -1,16 +1,14 @@
-# NHL Rookie Year Predictions
-This is a personal project of mine to predict the statline of NHL rookies the year they entered the league (their Calder season).
+# NHL Draft and Player Predictions Page
+This is a personal project of mine to predict NHL statistics of draft-eligible players. This page will be comprised of a welcome page, a draft predictions page, and a player page to predict the next few games' worth of statistics.
 
-Right now there is only an iPYNB file in the repository because it is easier to visualize the data during the preprocessing phase. Later iterations of this project include CLI to look up a rookie and their predicted statlines, as well as entering a rookie with certain details and predicting their statlines.
+This page will be connected to a PostgreSQL database to store all the data. Each player will have their stats recorded and updated as the season progresses. 
+
 
 # Current Stage
-The pre-processing phase has currently been completed, combining the draft information from Kaggle with the data from each player's rookie year.
+The Schema and PostgreSQL database are being designed currently to make data retrieval and modification as efficient as possible.
 
-Phase 2 is underway, taking the statistics and running ANOVA tests to figure out which statistics are significant between different variables that will be regressed on.
 
-# Future Plans
-- Phase 3 will be creating the models, beginning with "straightforward" models, such as SVMs and Decision Trees, and then branching to neural networks.
-- Phase 4 will be training the models and tuning the hyperparameters.
-- Phase 5 will be analysis of the models' performances and plotting how the model performed in projecting statistics.
-- Phase 6 wil be creating a CLI for this project and migrating it from a iPYNB file to a formal python file, creating a CLI for access to the projections.
-- Phase 7 will be putting "finishing touches" on the program.
+# Next Steps
+- Once the schema are developed, next will be to populate the data from HockeyDB. This would include their draft year statistics and any postseason/tournament statistics they may have.
+- Once the database is populated, then the draft prediction model can be developed. The exact model has yet to be determined.
+- After the draft prediction model, then we would use an Autoregressive Conditional Poisson (ACP) model to predict the next games' worth of data for a specific player based upon their previous game stats.

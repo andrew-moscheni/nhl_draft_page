@@ -34,7 +34,7 @@ CREATE TYPE player_game_log AS (
 
 --predicted statlines
 CREATE TYPE player_predicted_statline AS (
-    prediction_date DATE NOT NULL DEFAULT CURRENT_DATE,
+    prediction_date DATE DEFAULT CURRENT_DATE,
     predicted_goals DECIMAL(4,2),
     predicted_assists DECIMAL(4,2),
     predicted_points DECIMAL(4,2) GENERATED ALWAYS AS (predicted_goals + predicted_assists) STORED,
@@ -52,16 +52,19 @@ CREATE TABLE player(
     pick INTEGER NOT NULL,
     last_year INTEGER NOT NULL,
     amateur_league VARCHAR(200),
-    retired BOOLEAN
+    retired BOOLEAN,
 
     --season statistics
-    season_stats player_season_stat_entry[] DEFAULT ARRAY[]::player_season_stat_entry[]
+    season_stats player_season_stat_entry[] DEFAULT ARRAY[]::player_season_stat_entry[],
 
     --game log storage
-    game_logs player_game_log[] DEFAULT ARRAY[]::player_game_log[]
+    game_logs player_game_log[] DEFAULT ARRAY[]::player_game_log[],
 
     --predicted statline storage
-    predicted_stats player_predicted_statline[] DEFAULT ARRAY[]:player_predicted_statline[]
+    predicted_stats player_predicted_statline[] DEFAULT ARRAY[]:player_predicted_statline[],
+
+    --totals
+    all_time_totals player_predicted_statline
 );
 
 CREATE TYPE team_season_stat AS (

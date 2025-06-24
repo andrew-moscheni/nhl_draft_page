@@ -1,0 +1,1 @@
+# collect draft year and seasonal stats for each player

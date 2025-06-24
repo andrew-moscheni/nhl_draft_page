@@ -5,10 +5,9 @@ This page will be connected to a PostgreSQL database to store all the data. Each
 
 
 # Current Stage
-The Schema and PostgreSQL database are being designed currently to make data retrieval and modification as efficient as possible.
+Web-scraping hockey sites for the data is in progress.
 
 
 # Next Steps
-- Once the schema are developed, next will be to populate the data from HockeyDB. This would include their draft year statistics and any postseason/tournament statistics they may have.
 - Once the database is populated, then the draft prediction model can be developed. The exact model has yet to be determined.
 - After the draft prediction model, then we would use an Autoregressive Conditional Poisson (ACP) model to predict the next games' worth of data for a specific player based upon their previous game stats.

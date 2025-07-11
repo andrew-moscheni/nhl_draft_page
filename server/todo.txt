@@ -1,6 +1,3 @@
-APP SETUP
-1. Convert structure into Flask application for easier conversion between pipeline and application
-
 DATA COLLECTION STEPS (HockeyDB)
 1. collect all players drafted from 1963-2024
 

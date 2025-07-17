@@ -1,14 +1,12 @@
 DATA COLLECTION STEPS (HockeyDB)
-1. collect all players drafted from 1963-2024
+1. collect draft year and seasonal stats
 
-    -> names, teams, draft year, position, pick, link to player profile
+    -> use psycopg2 to import directly into the PostgreSQL database after scraping
 
-2. collect draft year and seasonal stats
-
-3. collect team stats by year
+2. collect team stats by year
 
     -> name, year, goals_for, goals_against
 
-4. collect game logs of each player's last 20 games to be used in predictions
+3. collect game logs of each player's last 20 games to be used in predictions
 
     -> ACP with external predictors

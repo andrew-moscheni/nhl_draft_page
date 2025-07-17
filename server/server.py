@@ -52,7 +52,7 @@ def get_predicted_draft_totals() -> Dict[str, str]:
     Fetch the prediction of a player's draft totals. Then, use a simple regression model or 
     maybe a neural network to predict a prospective player's statlines.
     """
-    # insert the machine learning model here to generate totals
+    # insert the machine learning model here to generate totals (draft totals)
     prediction = {
         "total_goals": 0,
         "total_assists": 0,
@@ -69,7 +69,7 @@ def get_predicted_game_totals() -> Dict[str, str]:
     Fetch the previous game statlines for a player. Then, use Autoregressive Conditional Poisson
     to predict the next few games for a player.
     """
-    # insert the ACP model here to generate totals
+    # insert the ACP model here to generate totals for game predictions (time series)
     prediction = {
         "previous_games": [],
         "predicted_games": []
